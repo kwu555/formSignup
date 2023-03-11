@@ -4,11 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.Select;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.util.List;
 import java.util.Optional;
@@ -27,13 +25,15 @@ public class SignupApplication {
 //		SpringApplication.run(SignupApplication.class, args);
 
 // declaration and instantiation of objects/variables
-		System.setProperty("webdriver.chrome.driver","/Users/haijiewu/Desktop/Intellij/signup/src/main/resources/driver/chromedriver_mac64/chromedriver");
+		//System.setProperty("webdriver.chrome.driver","/Users/haijiewu/Desktop/Intellij/signup/src/main/resources/driver/chromedriver_mac64/chromedriver");
+		System.setProperty("webdriver.gecko.driver","/home/kw/IdeaProjects/formSignup/src/main/resources/driver/chromedriver_mac64/geckodriver");
 
-		ChromeOptions ops = new ChromeOptions();
+		//ChromeOptions ops = new ChromeOptions();
+		FirefoxOptions ops = new FirefoxOptions();
 		ops.addArguments("--remote-allow-origins=*");
 
-		WebDriver driver= new ChromeDriver(ops);
-
+//		WebDriver driver= (WebDriver) new ChromeDriver(ops);
+		WebDriver driver = new FirefoxDriver();
 		String baseUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfA9zHG9OUYUCr57fC7CuAKyvf1_DmqdC_kZrBB4gGRNN48fQ/viewform";
 
 		// launch Fire fox and direct it to the Base URL
