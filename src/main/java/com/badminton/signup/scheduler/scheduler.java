@@ -11,20 +11,29 @@ public class scheduler{
     @Autowired
     private FormSignup formSignup;
 
-    private String Kevin = "Kevin Wu";
-    private String Naz = "Naz Shah";
-    private String Done = "Done";
+    private static final String Kevin = "Kevin Wu";
+    private static final String Naz = "Naz Shah";
+    private static final String Done = "Done";
 
-    private String[] tuesday_names = new String[]{Kevin,Naz,Done};
-    private int tuesday_process = 0;
+    private static final String[] tuesday_names = new String[]{Kevin,Naz,Done};
+    private int tuesdayProcess = 0;
 
-    @Scheduled(cron = "${cron.tuesday.check}")
+    private static final String[] thursday_names = new String[]{Naz,Done};
+    private int thursdayProcess = 0;
+
+    @Scheduled(cron = "${cron.check}")
     public void tuesdayCheck(){
 
-        if(!tuesday_names[tuesday_process].equals(Done)){
-            if(formSignup.signup(tuesday_names[tuesday_process])){
-                tuesday_process++;
+        if(!tuesday_names[tuesdayProcess].equals(Done)){
+            if(formSignup.signup(tuesday_names[tuesdayProcess], "TUES")){
+                tuesdayProcess++;
                 tuesdayCheck();
+            }
+        }
+
+        if(!thursday_names[thursdayProcess].equals(Done)){
+            if(formSignup.signup(thursday_names[thursdayProcess], "THUR")){
+                thursdayProcess++;
             }
         }
     }
