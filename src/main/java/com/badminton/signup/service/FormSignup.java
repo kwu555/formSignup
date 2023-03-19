@@ -31,8 +31,8 @@ public class FormSignup{
 
 
 
-        WebDriver driver = chromeSetup();
-//        WebDriver driver = firefoxSetup();
+//        WebDriver driver = chromeSetup();
+        WebDriver driver = firefoxSetup();
 
 
         String dayPath;
@@ -105,7 +105,7 @@ public class FormSignup{
     }
 
     private WebDriver firefoxSetup(){
-        System.setProperty("webdriver.gecko.driver","/Users/haijiewu/Desktop/Intellij/signup/src/main/resources/driver/chromedriver_mac64/chromedriver");
+        System.setProperty("webdriver.gecko.driver","/home/kw/IdeaProjects/formSignup/src/main/resources/driver/chromedriver_mac64/geckodriver");
 
         return new FirefoxDriver();
     }
