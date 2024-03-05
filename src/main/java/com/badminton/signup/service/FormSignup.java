@@ -15,17 +15,17 @@ import java.util.Optional;
 public class FormSignup{
 
     public static final String XPATH_EMAIL = "//*[@id=\"mG61Hd\"]/div[2]/div/div[2]/div[1]/div/div[1]/div[2]/div[1]/div/div[1]/input";
-    public static final String XPATH_FULL_TUES_TEXT = "//*[@id=\"mG61Hd\"]/div[2]/div/div[2]/div[4]/div/div/div[2]/div[1]/div[1]/label/div/div[2]/div/span";
+    public static final String XPATH_FULL_TUES_TEXT = "//*[@id=\"mG61Hd\"]/div[2]/div/div[2]/div[4]/div/div/div[2]/div[1]/div/label/div/div[2]/div/span";
     public static final String XPATH_FULL_THUR_TEXT = "//*[@id=\"mG61Hd\"]/div[2]/div/div[2]/div[4]/div/div/div[2]/div[1]/div[2]/label/div/div[2]/div/span";
 
     public static final String XPATH_NAME_CLICK_DROPDOWN = "//*[@id=\"mG61Hd\"]/div[2]/div/div[2]/div[2]/div/div/div[2]/div";
     public static final String XPATH_NAME_SELECT_NAME = "//*[@id=\"mG61Hd\"]/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[2]";
-    public static final String XPATH_REGISTER_TUES__TICK = "//*[@id=\"i25\"]";
+    public static final String XPATH_REGISTER_TUES__TICK = "//*[@id=\"i28\"]";
     public static final String XPATH_REGISTER_THUR__TICK = "//*[@id=\"i28\"]";
 
     public static final String XPATH_SUBMIT = "//*[@id=\"mG61Hd\"]/div[2]/div/div[3]/div/div[1]/div";
 
-    public static final String BASE_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfA9zHG9OUYUCr57fC7CuAKyvf1_DmqdC_kZrBB4gGRNN48fQ/viewform";
+    public static final String BASE_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeWdUie1bo4BwSwcH1sEQwUVFLtrxtD0oK3xtL7BicMe9GGma/viewform";
 
     public boolean signup(String chooseName, String day){
 
