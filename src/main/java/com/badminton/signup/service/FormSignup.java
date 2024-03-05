@@ -25,7 +25,7 @@ public class FormSignup{
 
     public static final String XPATH_SUBMIT = "//*[@id=\"mG61Hd\"]/div[2]/div/div[3]/div/div[1]/div";
 
-    public static final String BASE_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeWdUie1bo4BwSwcH1sEQwUVFLtrxtD0oK3xtL7BicMe9GGma/viewform";
+    public static final String BASE_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeWdUie1bo4BwSwcH1sEQwUVFLtrxtD0oK3xtL7BicMe9GGmA/viewform";
 
     public boolean signup(String chooseName, String day){
 
